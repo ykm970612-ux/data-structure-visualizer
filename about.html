@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>프로젝트 설명 - Data Structure Visualizer</title>
+  <title>자료구조 설명 - Data Structure Visualizer</title>
   <link href="vendor/bootstrap-reboot.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,85 +11,119 @@
   <div class="app-shell">
     <div class="page-links" aria-label="페이지 이동">
       <a href="index.html">시각화</a>
-      <a class="active" href="about.html">프로젝트 설명</a>
+      <a class="active" href="about.html">자료구조 설명</a>
     </div>
 
     <main class="about-layout">
       <section class="panel">
         <div class="panel-heading">
-          <h1>Data Structure Visualizer</h1>
+          <h1>자료구조 핵심 개념</h1>
         </div>
         <p class="concept-text">
-          이 웹사이트는 자료구조 수업에서 배운 Stack, Queue, Linked List, Binary Search Tree의 동작을
-          사용자가 직접 입력하고 실행하면서 이해할 수 있도록 만든 학습용 시각화 프로젝트입니다.
+          이 페이지는 시각화 페이지에서 다루는 네 가지 자료구조의 개념, 주요 연산, 시간복잡도,
+          사용 예시를 정리한 학습용 설명 페이지입니다.
         </p>
       </section>
 
-      <section class="panel">
-        <div class="panel-heading">
-          <h2>필수 요구 사항 충족 여부</h2>
-        </div>
-        <div class="requirement-grid">
-          <article>
-            <strong>웹페이지 2개 이상</strong>
-            <p>시각화 페이지와 프로젝트 설명 페이지로 구성했습니다.</p>
-          </article>
-          <article>
-            <strong>이벤트 처리 기능</strong>
-            <p>자료구조 선택, 입력, 삽입, 삭제, 검색, 초기화 버튼 이벤트를 구현했습니다.</p>
-          </article>
-          <article>
-            <strong>반응형 웹 지원</strong>
-            <p>PC, 태블릿, 모바일 화면에 맞춰 카드와 패널 배치가 변경됩니다.</p>
-          </article>
-        </div>
+      <section class="structure-explain-grid">
+        <article class="panel explain-card">
+          <div class="panel-heading">
+            <h2>Stack</h2>
+          </div>
+          <p>
+            Stack은 마지막에 들어온 데이터가 가장 먼저 나가는 LIFO 구조입니다.
+            데이터는 top 위치에서만 삽입되고 삭제됩니다.
+          </p>
+          <ul>
+            <li>주요 연산: push, pop, top</li>
+            <li>시간복잡도: push O(1), pop O(1), top O(1)</li>
+            <li>예시: 브라우저 뒤로 가기, 실행 취소, 함수 호출 스택</li>
+          </ul>
+        </article>
+
+        <article class="panel explain-card">
+          <div class="panel-heading">
+            <h2>Queue</h2>
+          </div>
+          <p>
+            Queue는 먼저 들어온 데이터가 먼저 나가는 FIFO 구조입니다.
+            데이터는 rear에서 들어오고 front에서 나갑니다.
+          </p>
+          <ul>
+            <li>주요 연산: enqueue, dequeue, front, rear</li>
+            <li>시간복잡도: enqueue O(1), dequeue O(1)</li>
+            <li>예시: 프린터 대기열, 작업 스케줄링, BFS 탐색</li>
+          </ul>
+        </article>
+
+        <article class="panel explain-card">
+          <div class="panel-heading">
+            <h2>Linked List</h2>
+          </div>
+          <p>
+            Linked List는 데이터와 다음 노드의 주소를 함께 저장하는 노드들이 연결된 구조입니다.
+            배열처럼 연속된 메모리를 필요로 하지 않습니다.
+          </p>
+          <ul>
+            <li>주요 연산: 노드 삽입, 노드 삭제, 노드 검색</li>
+            <li>시간복잡도: 검색 O(n), 삭제 O(n), 삽입 위치에 따라 O(1) 또는 O(n)</li>
+            <li>예시: 음악 재생 목록, 동적 메모리 관리, 해시 체이닝</li>
+          </ul>
+        </article>
+
+        <article class="panel explain-card">
+          <div class="panel-heading">
+            <h2>Binary Search Tree</h2>
+          </div>
+          <p>
+            Binary Search Tree는 왼쪽 자식은 부모보다 작고 오른쪽 자식은 부모보다 큰 값을 가지는
+            이진 트리입니다. 중위 순회를 하면 값이 오름차순으로 나옵니다.
+          </p>
+          <ul>
+            <li>주요 연산: insert, search, inorder traversal</li>
+            <li>시간복잡도: 평균 O(log n), 한쪽으로 치우치면 최악 O(n)</li>
+            <li>예시: 정렬된 데이터 탐색, 집합 표현, 검색 인덱스</li>
+          </ul>
+        </article>
       </section>
 
       <section class="panel">
         <div class="panel-heading">
-          <h2>구현 자료구조</h2>
-        </div>
-        <div class="info-grid">
-          <article>
-            <h3>Stack</h3>
-            <p>push, pop, top 확인, overflow/underflow 메시지를 지원합니다.</p>
-          </article>
-          <article>
-            <h3>Queue</h3>
-            <p>enqueue, dequeue, front/rear 확인, empty 상태를 시각화합니다.</p>
-          </article>
-          <article>
-            <h3>Linked List</h3>
-            <p>노드 삽입, 삭제, 검색과 포인터 연결 구조를 보여줍니다.</p>
-          </article>
-          <article>
-            <h3>Binary Search Tree</h3>
-            <p>insert, search, inorder traversal과 탐색 경로 하이라이트를 제공합니다.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="panel">
-        <div class="panel-heading">
-          <h2>사용 기술</h2>
+          <h2>한눈에 비교</h2>
         </div>
         <table>
+          <thead>
+            <tr>
+              <th>자료구조</th>
+              <th>핵심 규칙</th>
+              <th>강점</th>
+              <th>대표 연산</th>
+            </tr>
+          </thead>
           <tbody>
             <tr>
-              <td>HTML</td>
-              <td>페이지 구조와 자료구조 설명 영역 구성</td>
+              <td>Stack</td>
+              <td>LIFO</td>
+              <td>최근 데이터 처리</td>
+              <td>push, pop</td>
             </tr>
             <tr>
-              <td>CSS</td>
-              <td>다크 대시보드 디자인과 반응형 레이아웃</td>
+              <td>Queue</td>
+              <td>FIFO</td>
+              <td>순서 보장 처리</td>
+              <td>enqueue, dequeue</td>
             </tr>
             <tr>
-              <td>JavaScript</td>
-              <td>자료구조 연산 로직과 이벤트 처리</td>
+              <td>Linked List</td>
+              <td>노드 연결</td>
+              <td>동적 크기 변경</td>
+              <td>insert, delete, search</td>
             </tr>
             <tr>
-              <td>D3.js</td>
-              <td>자료구조 노드 렌더링과 화면 갱신</td>
+              <td>BST</td>
+              <td>왼쪽 작음, 오른쪽 큼</td>
+              <td>효율적인 탐색</td>
+              <td>insert, search, inorder</td>
             </tr>
           </tbody>
         </table>

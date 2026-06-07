@@ -24,6 +24,7 @@ http://127.0.0.1:8000/
 ## 주요 기능
 
 - `index.html`, `about.html` 2개 페이지 구성
+- Stack, Queue, Linked List, Binary Search Tree 설명 페이지 제공
 - 상단 카드형 자료구조 선택 메뉴
 - 입력값 기반 연산 실행
 - D3.js 기반 시각화 렌더링
