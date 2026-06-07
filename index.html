@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Structure Visualizer</title>
+  <link href="vendor/bootstrap-reboot.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <nav class="structure-nav" id="structureNav" aria-label="자료구조 선택"></nav>
+
+    <main class="dashboard">
+      <section class="panel concept-panel" aria-label="자료구조 설명">
+        <div class="panel-heading">
+          <h2 id="structureTitle">Stack</h2>
+        </div>
+        <p id="structureConcept" class="concept-text"></p>
+
+        <div class="info-grid">
+          <article>
+            <h3>주요 연산</h3>
+            <ul id="operationList"></ul>
+          </article>
+          <article>
+            <h3>사용 예시</h3>
+            <p id="useCaseText"></p>
+          </article>
+        </div>
+
+        <div class="complexity-wrap">
+          <h3>시간복잡도</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>연산</th>
+                <th>시간복잡도</th>
+              </tr>
+            </thead>
+            <tbody id="complexityTable"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel control-panel" aria-label="자료구조 연산">
+        <div class="panel-heading">
+          <h2>입력과 연산</h2>
+        </div>
+
+        <div class="guide-box">
+          <strong>사용 방법</strong>
+          <p id="guideText">숫자를 입력한 뒤 원하는 연산 버튼을 누르세요.</p>
+        </div>
+
+        <label class="input-label" for="valueInput">입력값</label>
+        <div class="input-row">
+          <input id="valueInput" type="number" placeholder="숫자 입력" inputmode="numeric">
+          <button id="primaryAction" type="button">Push</button>
+        </div>
+
+        <div class="button-grid" id="actionButtons"></div>
+        <button class="reset-button" id="resetButton" type="button">초기화</button>
+      </section>
+
+      <section class="panel visual-panel" aria-label="시각화 영역">
+        <div class="panel-heading">
+          <h2 id="visualTitle">Stack 동작 화면</h2>
+        </div>
+        <div class="visual-stage" id="visualStage"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="vendor/d3.min.js"></script>
+  <script src="script.js?v=2"></script>
+</body>
+</html>
