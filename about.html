@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프로젝트 설명 - Data Structure Visualizer</title>
+  <link href="vendor/bootstrap-reboot.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="page-links" aria-label="페이지 이동">
+      <a href="index.html">시각화</a>
+      <a class="active" href="about.html">프로젝트 설명</a>
+    </div>
+
+    <main class="about-layout">
+      <section class="panel">
+        <div class="panel-heading">
+          <h1>Data Structure Visualizer</h1>
+        </div>
+        <p class="concept-text">
+          이 웹사이트는 자료구조 수업에서 배운 Stack, Queue, Linked List, Binary Search Tree의 동작을
+          사용자가 직접 입력하고 실행하면서 이해할 수 있도록 만든 학습용 시각화 프로젝트입니다.
+        </p>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <h2>필수 요구 사항 충족 여부</h2>
+        </div>
+        <div class="requirement-grid">
+          <article>
+            <strong>웹페이지 2개 이상</strong>
+            <p>시각화 페이지와 프로젝트 설명 페이지로 구성했습니다.</p>
+          </article>
+          <article>
+            <strong>이벤트 처리 기능</strong>
+            <p>자료구조 선택, 입력, 삽입, 삭제, 검색, 초기화 버튼 이벤트를 구현했습니다.</p>
+          </article>
+          <article>
+            <strong>반응형 웹 지원</strong>
+            <p>PC, 태블릿, 모바일 화면에 맞춰 카드와 패널 배치가 변경됩니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <h2>구현 자료구조</h2>
+        </div>
+        <div class="info-grid">
+          <article>
+            <h3>Stack</h3>
+            <p>push, pop, top 확인, overflow/underflow 메시지를 지원합니다.</p>
+          </article>
+          <article>
+            <h3>Queue</h3>
+            <p>enqueue, dequeue, front/rear 확인, empty 상태를 시각화합니다.</p>
+          </article>
+          <article>
+            <h3>Linked List</h3>
+            <p>노드 삽입, 삭제, 검색과 포인터 연결 구조를 보여줍니다.</p>
+          </article>
+          <article>
+            <h3>Binary Search Tree</h3>
+            <p>insert, search, inorder traversal과 탐색 경로 하이라이트를 제공합니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <h2>사용 기술</h2>
+        </div>
+        <table>
+          <tbody>
+            <tr>
+              <td>HTML</td>
+              <td>페이지 구조와 자료구조 설명 영역 구성</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>다크 대시보드 디자인과 반응형 레이아웃</td>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+              <td>자료구조 연산 로직과 이벤트 처리</td>
+            </tr>
+            <tr>
+              <td>D3.js</td>
+              <td>자료구조 노드 렌더링과 화면 갱신</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
